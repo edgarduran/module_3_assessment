@@ -58,7 +58,7 @@ class Api::V1::ItemsControllerTest < ActionController::TestCase
     assert_equal 1, Item.count
 
     delete :destroy, format: :json, id: Item.first.id
-    
+
     assert_response :success
     assert_equal 0, Item.count
   end
