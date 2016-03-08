@@ -1,1 +1,11 @@
-<%= @products %>
+<% @products[:products].each do |product| %>
+  <ul>
+    <li>Name: <%= product[:name] %></li>
+    <li>Sku: <%= product[:sku] %></li>
+    <li>Sale Price:<%= product[:salePrice] %></li>
+    <li>Image: <%= product[:image] %></li>
+    <li>Description: <%= product[:shortDescription] %></li>
+    <li>Avg Customer Rating: <%= product[:customerReviewAverage] %></li>
+  </ul>
+
+<% end %>
