@@ -25,7 +25,7 @@ class BestbuyService
     end.join
     search = words.slice(0..-2)
     binding.pry
-    parse_json(connection.get("products(search=#{search})?show=sku,name,salePrice,shortDescription,image,customerReviewAverage&format=json&pageSize=15&page=1&apiKey=ubhx8perq9r8xj9hukpe66xr"))
+    parse_json(connection.get("products(search=#{search})?show=sku,name,salePrice,shortDescription,image,customerReviewAverage&format=json&pageSize=3&page=1&apiKey=ubhx8perq9r8xj9hukpe66xr"))
   end
 
   private
