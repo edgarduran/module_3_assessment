@@ -23,9 +23,8 @@ class BestbuyService
     words = params[:search].split(' ').map do |word|
       "search=" + word + "&"
     end.join
-    search = words.slice(0..-2)
-    binding.pry
-    parse_json(connection.get("products(search=#{search})?show=sku,name,salePrice,shortDescription,image,customerReviewAverage&format=json&pageSize=3&page=1&apiKey=ubhx8perq9r8xj9hukpe66xr"))
+    string = words.slice(0..-2)
+    parse_json(connection.get("products(search=#{string})?show=sku,name,salePrice,shortDescription,image,customerReviewAverage&format=json&pageSize=3&page=1&apiKey=ubhx8perq9r8xj9hukpe66xr"))
   end
 
   private
