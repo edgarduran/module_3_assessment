@@ -13,12 +13,16 @@ gem "haml-rails"
 gem "therubyracer"
 gem "less-rails-bootstrap"
 gem "minitest-rails"
+gem 'faraday'
+gem 'figaro'
+gem 'responders'
+gem 'pry'
 
 group :development do
   gem "spring"
 end
 
-group :development, :test do
+group :test do
   gem "minitest-rails-capybara"
   gem "pry", :require => "pry"
 end
