@@ -1,4 +1,11 @@
 <div class="container">
+  <div class="center-align">
+    <%= form_tag search_index_path, method: :get do %>
+      <%= label_tag :product %>
+      <%= text_field_tag :product %>
+      <%= submit_tag "Search", class:"btn btn-success" %>
+    <% end %>
+  </div>
   <div class="row">
     <div class="col-sm-12">
       <h1><%= @items.count %> Items</h1>
@@ -15,4 +22,3 @@
     </div>
   <% end %>
 </div>
-
