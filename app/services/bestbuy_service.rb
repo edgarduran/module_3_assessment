@@ -12,7 +12,6 @@ class BestbuyService
 
 
   def product_search(params)
-    binding.pry
     if params[:search].split(' ').size == 1
       parse_json(connection.get("products(search=#{params[:search]})?show=sku,name,salePrice,shortDescription,image,customerReviewAverage&format=json&pageSize=15&page=1&apiKey=ubhx8perq9r8xj9hukpe66xr"))
     else
