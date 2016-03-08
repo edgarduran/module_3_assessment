@@ -12,12 +12,12 @@ class BestbuyService
 
 
   def products
-    
+    parse_json(connection.get("products(search=#{params[:search]})?format=json&show=sku,name,salePrice,shortDescription,image,customerReviewAverage&apiKey=ubhx8perq9r8xj9hukpe66xr"))
   end
 
   private
-  def parse_json
-
+  def parse_json(response)
+    JSON.parse(response.body, symbolize_names: true)
   end
 
 end
